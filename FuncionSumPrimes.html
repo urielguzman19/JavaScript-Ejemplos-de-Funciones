@@ -1,0 +1,62 @@
+<html>
+<head>
+	<title>Función Suma de Primeros 1000 números primos</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+</head>
+</head>
+<body>
+	<p>Suma de los primeros 1000 números primos</p>
+	<script type="text/javascript">
+	  /*Función que recibe n como parametro*/
+	  function primerosMilPrimos(n){
+
+	  	var suma=0;
+	  	var numero=0;
+
+        /*Ciclo que va de 1 hasta valor de n*/
+	  	for(i =1; i<=n; i++){
+            
+            /*Variable contador*/
+            var counter=0;
+            
+            for(numero=i; numero>=1; numero--){
+                  
+                /*Si módulo de división entre número i
+                y variable numero es igual a 0*/  
+            	if(i%numero==0){
+                    
+                    /*Incrementa contador en 1 por cada módulo de división
+			         *que encuentre*/
+            		counter=counter+1;
+            	}
+            }
+            /* Si counter es 2 el número i tiene dos módulos
+		     * que son entre 1 y el mismo(numero)
+		     * por lo tanto número i es primo*/
+            if (counter==2){
+
+            	/*Suma cada número primo al anterior hasta acabar 
+				*de recorrer el primer ciclo*/
+            	suma=suma+i;
+            }
+
+	  	}
+	  	/*Muestra el resultado en un script Emergente */
+	  	alert("Resultado de la suma de primeros 1000 números primos es "+suma);
+	  	//document.write(suma);
+
+        /*For node.js CodeEval
+	  	console.log(suma);*/
+
+	  	/*Regresa el resultado de la función*/
+        return resultadoFunción;  
+
+
+	  }
+	  /*Variable que guarda el resultado de la función*/
+	  var resultadoFunción=primerosMilPrimos(7919);
+
+	</script>
+
+</body>
+</html>
