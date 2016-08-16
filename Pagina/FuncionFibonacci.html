@@ -1,0 +1,149 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Curso Javascript | Funciones</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/styles.css" />
+  
+  <!-- Scripts -->
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+  <script type="text/javascript" src="js/jquery.roundabout-1.0.min.js"></script> 
+  <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+  <script type="text/javascript">   
+    $(document).ready(function() { //Start up our Featured Project Carosuel
+      $('#featured ul').roundabout({
+        easing: 'easeOutInCirc',
+        duration: 600
+      });
+    });
+  </script>  
+  
+</head>
+<body>
+  <div id="wrapper" class="container_12 clearfix">
+
+    <!-- Text Logo -->
+    <h1 id="logo" class="grid_4">Javascript</h1>
+    
+    <!-- Navigation Menu -->
+    <ul id="navigation" class="grid_8">
+      <li><a href="Funcion3-index.html" class="current"><span class="meta">Homepage Javascript</span><br />Funciones</a></li>
+    </ul>
+    
+    <div class="hr grid_12">&nbsp;</div>
+    <div class="clear"></div>
+    
+    <!-- Featured Image Slider -->
+    <div id="featured" class="clearfix grid_12">
+      <ul> 
+        <li>
+          <a href="">
+            <span>Lenguaje Javascript</span>
+            <img src="images/js1.jpg" alt="" />
+          </a>
+        </li>  
+        <li>
+          <a href="">
+            <span>Lenguaje Javascript</span>
+            <img src="images/js2.jpg" alt="" />
+          </a>  
+        </li>  
+        <li>
+          <a href="">
+            <span>Lenguaje Javascript</span>
+            <img src="images/js3.jpg" alt="" />
+          </a>
+        </li>  
+        <li>
+          <a href="">
+            <span>Lenguaje Javascript</span>
+            <img src="images/js1.jpg" alt="" />
+          </a>
+        </li>  
+        <li>
+          <a href="">
+            <spant>Lenguaje Javascript</span>
+            <img src="images/js2.jpg" alt="" />
+          </a>
+        </li>  
+      </ul> 
+    </div>
+    <div class="hr grid_12 clearfix">&nbsp;</div>
+
+
+
+    <!-- Caption Line -->
+    <div id=text>
+    <h2 class="grid_12 caption clearfix">Funciones con <span>Javascript</span> ¡Feliz Codificación!</h2>
+    <h3 class="grid_12 caption clearfix">Función 3 - Calcular los primeros 10 números en la serie Fibonacci
+      <!--Función principal Serie Fibonacci
+      imprime resultado donde en la página donde se inserte el código. -->
+      <script type="text/javascript">
+
+       function serieFibonacci(numero){
+
+        var serie = 0;
+        var anterior = 0;
+        var siguiente = 1;
+
+        document.write(1+",");
+
+         for (i=0; i<=numero; i++){
+            serie = anterior + siguiente;
+            anterior = siguiente;
+            siguiente = serie; 
+            /*Imprimir en consola*/ 
+            console.log(serie+",");
+            /*Imprime en html*/  
+            document.write(serie+",");
+            //document.getElementById('div').innerHTML=serie;                      
+         }           
+       
+           return calcularSerie;
+       }
+
+       var calcularSerie = serieFibonacci(10);
+    
+    </script>
+    </h3>
+    </div>
+    
+    <div class="hr grid_12 clearfix quicknavhr">&nbsp;</div>
+    <div id="quicknav" class="grid_12">
+      <a class="quicknavgrid_3 quicknav alpha" href="portfolio.html">
+          <h4 class="title ">¿Qué es Javascript?</h4>
+          <p></p>
+          <p style="text-align:center;"><img alt="" src="images/Art_Artdesigner.lv.png" /></p>
+        
+      </a>
+      <a class="quicknavgrid_3 quicknav" href="about.html">
+          <h4 class="title ">Más que un lenguaje web dinámico</h4>
+          <p></p>
+          <p style="text-align:center;"><img alt="" src="images/info.png" /></p>
+        
+      </a>
+      <a class="quicknavgrid_3 quicknav" href="blog.html">
+          <h4 class="title ">Alta demanda en el mercado</h4>
+          <p>Cras vestibulum lorem et dui mollis sed posuere leo semper. </p>
+          <p style="text-align:center;"><img alt="" src="images/Blog_Artdesigner.lv.png" /></p>
+        
+      </a>
+      <a class="quicknavgrid_3 quicknav" href="#">
+          <h4 class="title ">Frameworks basados en él</h4>
+          <p>Cras vestibulum lorem et dui mollis sed posuere leo semper. </p>
+          <p style="text-align:center;"><img alt="" src="images/hungry_bird.png" /></p>
+      </a>
+    </div>
+    <div class="hr grid_12 clearfix">&nbsp;</div>
+    <!-- Footer -->
+    <p class="grid_12 footer clearfix">
+      <span class="float"><b>&copy; Copyright</b> <a href="">Uriel Guzmán </a>UAQ-FIF</span>
+      <a class="float right" href="#">top</a>
+    </p>
+    
+  </div><!--end wrapper-->
+</body>
+</html>
